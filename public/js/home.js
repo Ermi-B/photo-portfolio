@@ -23,21 +23,21 @@ carousel.addEventListener("mouseenter", () => {
   
   carousel.addEventListener("mouseleave", () => {
     intervalId = setInterval(() => {
-      carousel.scrollLeft += firstImgWidth;
+      startSliding()
     }, 7000); // Start the interval when the mouse leaves the carousel
   });
   
-//   // Start the interval initially
-//   intervalId = setInterval(() => {
-//     carousel.scrollLeft += firstImgWidth;
-//   }, 7000);
-// Start the interval initially
+ 
+const startSliding = ()=>{
+  // Start the interval initially
 intervalId = setInterval(() => {
-    const scrollLeft = carousel.scrollLeft;
-    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-    if (scrollLeft >= maxScrollLeft) {
-      carousel.scrollLeft = 0; // Reset to the beginning if reached the end
-    } else {
-      carousel.scrollLeft += firstImgWidth;
-    }
-  }, 10000);
+  const scrollLeft = carousel.scrollLeft;
+  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+  if (scrollLeft >= maxScrollLeft) {
+    carousel.scrollLeft = 0; // Reset to the beginning if reached the end
+  } else {
+    carousel.scrollLeft += firstImgWidth;
+  }
+}, 7000);
+}
+startSliding();
