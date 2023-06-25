@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.thin{
+.thin-font{
     
     font-family: 'Josefin Sans', sans-serif;
 
@@ -10,3 +10,9 @@
 .cursive{
     font-family: 'Dancing Script', cursive;
 }
+
+#carousel {
+    
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    
+  }
